@@ -1,6 +1,5 @@
-<!DOCTYPE html> 
-<html> 
-<style> 
+<html>
+	<style> 
     /*set border to the form*/ 
       
     form { 
@@ -99,28 +98,32 @@ body {font-size:16px;}
   color: red;
 	align: center;
 </style> 
-  
-<body bgcolor="#E6E6FA"> 
-  
-    <h2>Login to Ding!</h2> 
-	<br>
-	<h2>Downloading CSS Files...</h2> 
-    <!--Step 1 : Adding HTML-->
-    <form action="/action_page.php"> 
-  
-        <div class="container"> 
-            <label><b>Username</b></label> 
-            <input type="text" placeholder="Enter Username" name="uname" required> 
-  
-            <label><b>Password</b></label> 
-            <input type="password" placeholder="Enter Password" name="psw" required> 
-  
-	<a href="https://digitalripple.github.io/DoorDing/"><button type="button" class="cancelbtn">Login</button></a> 
-            <input type="checkbox" checked="checked"> Remember me 
-        </div> 
+<head>
 
-    </form> 
-  
-</body> 
-  
-</html> 
+<title>Login page</title>
+</head>
+ <h2>Login to Ding!</h2> 
+    <!--Step 1 : Adding HTML-->
+<script type="text/javascript">
+function display(form){
+if (form.username.value=="ding") { 
+		if (form.password.value=="ding") {              
+										location="https://digitalripple.github.io/DoorDing/" 
+											} else {
+													alert("Invalid Password")
+													}
+								} else {  alert("Invalid Username")
+										}
+						}
+			</script>			
+<body >
+
+<form >
+<input type="text" name="username" /><br><br>
+<input type="password" name="password"/><br><br>
+<input type="button" value="Login" onClick="display(this.form)"/>
+
+</form>
+
+</body>
+</html>
